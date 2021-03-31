@@ -1,0 +1,35 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> lewis blog – recommend</title>
+    <link>//xianjun.info/categories/recommend/</link>
+    <description>Recent content in recommend on  lewis blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 07 Dec 2019 15:27:43 +0800</lastBuildDate>
+    
+	  <atom:link href="//xianjun.info/categories/recommend/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>: 推荐</title>
+      <link>//xianjun.info/recommend/</link>
+      <pubDate>Sat, 07 Dec 2019 15:27:43 +0800</pubDate>
+      
+      <guid>//xianjun.info/recommend/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;推荐&#34;&gt;推荐&lt;/h1&gt;
+&lt;h2 id=&#34;网络资源&#34;&gt;网络资源&lt;/h2&gt;
+&lt;h2 id=&#34;应用软件&#34;&gt;应用软件&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

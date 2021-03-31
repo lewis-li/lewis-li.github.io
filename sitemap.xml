@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>//xianjun.info/blog/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/categories/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/tags/hugo/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/categories/program/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/tags/recommend/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/categories/recommend/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/tags/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/blog/hugo/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/recommend/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/</loc>
+    <lastmod>2019-12-07T15:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/about/</loc>
+    <lastmod>2019-07-12T17:49:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/docs/learn-react/</loc>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>//xianjun.info/series/</loc>
+  </url>
+  
+</urlset>

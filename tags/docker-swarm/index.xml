@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>贤军的博客 – docker swarm</title>
+    <link>http://xianjun.me/tags/docker-swarm/</link>
+    <description>Recent content in docker swarm on 贤军的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 09 Dec 2019 21:33:26 +0800</lastBuildDate>
+    
+	  <atom:link href="http://xianjun.me/tags/docker-swarm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Blog: Docker Swarm使用</title>
+      <link>http://xianjun.me/blog/docker-swarn/</link>
+      <pubDate>Mon, 09 Dec 2019 21:33:26 +0800</pubDate>
+      
+      <guid>http://xianjun.me/blog/docker-swarn/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;docker-stack&#34;&gt;Docker Stack&lt;/h2&gt;
+&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
+&lt;p&gt;在单文件定义多服务应用，部署并管理完整生命周期（初始化部署 -&amp;gt; 健康检查 -&amp;gt; 扩容 -&amp;gt; 更新 -&amp;gt; 回滚）。&lt;/p&gt;
+&lt;p&gt;stack配置文件：就是compose配置文件
+Stack 不支持构建&lt;/p&gt;
+&lt;p&gt;包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络&lt;/li&gt;
+&lt;li&gt;密钥&lt;/li&gt;
+&lt;li&gt;服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;docker stack deploy portainer --prune --compose-file portainer-agent-stack.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker stack ls
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

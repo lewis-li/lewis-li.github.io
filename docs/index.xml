@@ -1,0 +1,77 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> lewis blog – Docs</title>
+    <link>//xianjun.info/docs/</link>
+    <description>Recent content in Docs on  lewis blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    
+	  <atom:link href="//xianjun.info/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: </title>
+      <link>//xianjun.info/docs/learn-react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//xianjun.info/docs/learn-react/</guid>
+      <description>
+        
+        
+        &lt;pre&gt;&lt;code&gt;# import react,react-dom
+# 定义组件
+# 绑定及渲染
+ReactDOM.reader(e(组件名), &#39;dom元素&#39;)
+
+# 可选的jsx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;工具链&lt;/p&gt;
+&lt;h2 id=&#34;元素和组件&#34;&gt;元素和组件&lt;/h2&gt;
+&lt;h3 id=&#34;jsx&#34;&gt;jsx&lt;/h3&gt;
+&lt;p&gt;jsx: 编译后转成普通的javascript函数调用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;React.createElement() 
+#  返回对象的简化结构
+{
+    type: &amp;quot;&amp;quot;,
+    props: {
+        className: &amp;quot;&amp;quot;,
+        children: &amp;quot;&amp;quot;,
+    },
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;嵌入表达式
+属性：camelCase定义属性的名称&lt;/p&gt;
+&lt;h3 id=&#34;元素&#34;&gt;元素&lt;/h3&gt;
+&lt;p&gt;组件 -&amp;gt; react 元素 &amp;ndash;(react-dom)&amp;ndash;&amp;gt; dom&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ReactDOM.render(react-element, dom-element)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;react元素是不可变变量，只能创建全新的元素再传入到ReactDOM.render&lt;/p&gt;
+&lt;h3 id=&#34;组件--props&#34;&gt;组件 &amp;amp; Props&lt;/h3&gt;
+&lt;p&gt;组件：类似函数，接受参数 props，返回 react 元素&lt;/p&gt;
+&lt;p&gt;组合组件：
+提取组件：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;组件的props是不可更改&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;state--生命周期&#34;&gt;state &amp;amp; 生命周期&lt;/h3&gt;
+&lt;p&gt;state 更新:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;setState( (state, props) =&amp;gt; {
+    // new state
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;数据流动向下单向流动&#34;&gt;数据流动：向下单向流动&lt;/h3&gt;
+&lt;h3 id=&#34;事件处理&#34;&gt;事件处理&lt;/h3&gt;
+&lt;p&gt;命名采用小驼峰 camelCase&lt;/p&gt;
+&lt;p&gt;必须显式的使用 preventDefault来阻止默认行为
+e 是一个合成事件( SyntheticEvent )
+this 的处理：可以使用箭头函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button onClick={activateLasers}&amp;gt;
+  Activate Lasers
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;表单&#34;&gt;表单&lt;/h3&gt;
+&lt;p&gt;受控组件&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

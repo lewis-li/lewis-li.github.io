@@ -1,0 +1,109 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> lewis blog – 首页</title>
+    <link>//xianjun.info/</link>
+    <description>Recent content in 首页 on  lewis blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 07 Dec 2019 15:27:43 +0800</lastBuildDate>
+    
+	  <atom:link href="//xianjun.info/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+      
+    
+    
+    <item>
+      <title>Blog: 使用Hugo搭建网站</title>
+      <link>//xianjun.info/blog/hugo/</link>
+      <pubDate>Sat, 07 Dec 2019 15:27:43 +0800</pubDate>
+      
+      <guid>//xianjun.info/blog/hugo/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;以本网站 &lt;a href=&#34;https://xianjun.info&#34;&gt;https://xianjun.info&lt;/a&gt; 为例，用hugo从头搭建一个网站&lt;/p&gt;
+&lt;h2 id=&#34;安装及预览&#34;&gt;安装及预览&lt;/h2&gt;
+&lt;p&gt;安装（以mac为例，其他系统请看官方文档）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;brew new Hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建网站： mysite替换成你自己的网站名&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new site mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;目录说明:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;archetypes：包括内容类型，在创建新内容时自动生成内容的配置&lt;/li&gt;
+&lt;li&gt;content：包括网站内容，全部使用markdown格式&lt;/li&gt;
+&lt;li&gt;layouts：包括了网站的模版，决定内容如何呈现&lt;/li&gt;
+&lt;li&gt;static：包括了css, js, fonts, media等，决定网站的外观&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;重点：此时预览是一片空白，需要指定一个外观主题，请看下面的【主题及外观定制】&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;主题&#34;&gt;主题&lt;/h2&gt;
+&lt;p&gt;到 &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;https://themes.gohugo.io/&lt;/a&gt; 挑选一个主题，为了让你思维不飘走，我们先随意选定一个主题，让你继续熟悉所有配置后，你再回头挑一个自己喜好的主题吧。我们以 &lt;a href=&#34;https://github.com/spf13/hyde&#34;&gt;https://github.com/spf13/hyde&lt;/a&gt; 模板为例吧：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd themes
+git clone https://github.com/spf13/hyde.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后，启动本地服务：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo server --theme=hyde --buildDrafts --watch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;打开浏览器，输入 &lt;a href=&#34;http://127.0.0.1:1313&#34;&gt;http://127.0.0.1:1313&lt;/a&gt; 预览&lt;/p&gt;
+&lt;h3 id=&#34;多主题&#34;&gt;多主题&lt;/h3&gt;
+&lt;p&gt;查找次序：&lt;/p&gt;
+&lt;p&gt;文件内容合并：&lt;/p&gt;
+&lt;h2 id=&#34;内容及分类&#34;&gt;内容及分类&lt;/h2&gt;
+&lt;p&gt;理解内容组织与链接的对应方式&lt;/p&gt;
+&lt;p&gt;概念:&lt;/p&gt;
+&lt;p&gt;section
+slug
+path
+url
+type&lt;/p&gt;
+&lt;p&gt;索引页: _index.md&lt;/p&gt;
+&lt;h3 id=&#34;分类内容间的逻辑关系&#34;&gt;分类：内容间的逻辑关系&lt;/h3&gt;
+&lt;p&gt;taxonomy &amp;gt; term &amp;gt; content&lt;/p&gt;
+&lt;p&gt;页面划分及模板查找顺序：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分类下的术语列表：/taxonomy/terms.html&lt;/li&gt;
+&lt;li&gt;术语下的内容列表：/taxonomy/list.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
+&lt;h3 id=&#34;基本配置&#34;&gt;基本配置&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;baseURL = &amp;quot;http://xianjun.info&amp;quot; # 你的域名
+languageCode = &amp;quot;zh-Hans&amp;quot; # 语言类型
+defaultContentLanguage = &amp;quot;zh-Hans&amp;quot; # 文章默认的语言类型
+title = &amp;quot;贤军的博客&amp;quot; # 网站标题
+theme = &amp;quot;docsy&amp;quot; #  主题
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;配置导航&#34;&gt;配置导航&lt;/h3&gt;
+&lt;p&gt;主导航&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[[menu.main]]
+name=&amp;quot;博文&amp;quot;
+url=&amp;quot;/blog&amp;quot;
+weight=&amp;quot;1&amp;quot;
+[[menu.main]]
+name=&amp;quot;关于&amp;quot;
+url=&amp;quot;/about&amp;quot;
+weight=&amp;quot;2&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;外观定制&#34;&gt;外观定制&lt;/h2&gt;
+&lt;h2 id=&#34;模板&#34;&gt;模板&lt;/h2&gt;
+&lt;p&gt;TODO:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# kind:
+#     single: 页面
+#     list: 列表
+#     partial: 被引用
+# 
+# /
+# |- _index.md //首页
+# |- &amp;lt;section&amp;gt;
+#     |- &amp;lt;page&amp;gt;.md
+#     |- _index.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;查找规则：TODO&lt;/p&gt;
+&lt;h2 id=&#34;函数&#34;&gt;函数&lt;/h2&gt;
+&lt;p&gt;常用函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;anchorize
+humanize
+deafult
+jsonify
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

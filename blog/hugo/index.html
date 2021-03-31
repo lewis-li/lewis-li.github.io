@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.80.0" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>使用Hugo搭建网站 |  lewis blog</title><meta property="og:title" content="使用Hugo搭建网站" />
+<meta property="og:description" content="以本网站 https://xianjun.info 为例，用hugo从头搭建一个网站" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//xianjun.info/blog/hugo/" />
+<meta property="article:published_time" content="2019-12-07T15:27:43+08:00" />
+<meta property="article:modified_time" content="2019-12-07T15:27:43+08:00" />
+<meta itemprop="name" content="使用Hugo搭建网站">
+<meta itemprop="description" content="以本网站 https://xianjun.info 为例，用hugo从头搭建一个网站">
+<meta itemprop="datePublished" content="2019-12-07T15:27:43+08:00" />
+<meta itemprop="dateModified" content="2019-12-07T15:27:43+08:00" />
+<meta itemprop="wordCount" content="648">
+
+
+
+<meta itemprop="keywords" content="hugo," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Hugo搭建网站"/>
+<meta name="twitter:description" content="以本网站 https://xianjun.info 为例，用hugo从头搭建一个网站"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.0084926537b5667d9dea1d1fd692923ad85f8bcab133e53e7ec8af9ce8dd2ca5.css" as="style">
+<link href="/scss/main.min.0084926537b5667d9dea1d1fd692923ad85f8bcab133e53e7ec8af9ce8dd2ca5.css" rel="stylesheet" integrity="">
+
+
+
+
+
+<link rel="preload" href="/css/custom.min.2cc3edfbb63147beda9b760ef84399ad8703f0ebff88ee41588a5ae0393ad532.css" as="style">
+<link href="/css/custom.min.2cc3edfbb63147beda9b760ef84399ad8703f0ebff88ee41588a5ae0393ad532.css" rel="stylesheet" integrity="">
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+
+
+
+
+<link rel="preload" href="/css/custom.min.2cc3edfbb63147beda9b760ef84399ad8703f0ebff88ee41588a5ae0393ad532.css" as="style">
+<link href="/css/custom.min.2cc3edfbb63147beda9b760ef84399ad8703f0ebff88ee41588a5ae0393ad532.css" rel="stylesheet" integrity="">
+
+
+<link rel="preload" href="css/fontawesome/5.9.0/css/all.css" rel="stylesheet">
+<link href="/css/fontawesome/5.9.0/css/all.min.c5fc64c5261e1319f20fc89af11978da3164776c70d93f20c4fa298eac754266.css" rel="stylesheet" integrity="">
+    <title>使用Hugo搭建网站 |  lewis blog</title>
+  </head>
+  <body class="td-page td-blog">
+    <header>
+      
+<nav
+    class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+    <a class="navbar-brand" href="/">
+        <span
+            class="navbar-logo"></span><span
+            class="text-uppercase font-weight-bold"> lewis blog</span>
+    </a>
+    <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+            
+            
+            <li class="nav-item mr-4 mb-2 mb-lg-0">
+                
+                
+                
+                
+                <a class="nav-link"
+                    href="/blog"
+                    >
+                    <span>博文</span>
+                </a>
+            </li>
+            
+            <li class="nav-item mr-4 mb-2 mb-lg-0">
+                
+                
+                
+                
+                <a class="nav-link"
+                    href="/recommend"
+                    >
+                    <span>推荐</span>
+                </a>
+            </li>
+            
+            <li class="nav-item mr-4 mb-2 mb-lg-0">
+                
+                
+                
+                
+                <a class="nav-link"
+                    href="/docs"
+                    >
+                    <span>文档</span>
+                </a>
+            </li>
+            
+            <li class="nav-item mr-4 mb-2 mb-lg-0">
+                
+                
+                
+                
+                <a class="nav-link"
+                    href="/about"
+                    >
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            
+            
+        </ul>
+    </div>
+    <div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+
+<ul class="meta taxonomies">
+    
+    
+    <li class="term">
+        <a href="#" class="badge badge-primary">分类</a>
+        <ul>
+            
+            <li class="tax">
+                <a class=" badge badge-light" href="/categories/program">program</a>
+            </li>
+            
+            <li class="tax">
+                <a class=" badge badge-light" href="/categories/recommend">recommend</a>
+            </li>
+            
+        </ul>
+    </li>
+    
+    
+    
+    
+    
+    <li class="term">
+        <a href="#" class="badge badge-primary">标签</a>
+        <ul>
+            
+            <li class="tax">
+                <a class=" badge badge-light" href="/tags/hugo">hugo</a>
+            </li>
+            
+            <li class="tax">
+                <a class=" badge badge-light" href="/tags/recommend">recommend</a>
+            </li>
+            
+        </ul>
+    </li>
+    
+    
+</ul>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/blog/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Blogs</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="blog">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-bloghugo" href="/blog/hugo/">使用Hugo搭建网站</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#安装及预览">安装及预览</a></li>
+    <li><a href="#主题">主题</a>
+      <ul>
+        <li><a href="#多主题">多主题</a></li>
+      </ul>
+    </li>
+    <li><a href="#内容及分类">内容及分类</a>
+      <ul>
+        <li><a href="#分类内容间的逻辑关系">分类：内容间的逻辑关系</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置">配置</a>
+      <ul>
+        <li><a href="#基本配置">基本配置</a></li>
+        <li><a href="#配置导航">配置导航</a></li>
+      </ul>
+    </li>
+    <li><a href="#外观定制">外观定制</a></li>
+    <li><a href="#模板">模板</a></li>
+    <li><a href="#函数">函数</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
+            <a class="btn btn-lg -bg-orange td-rss-button d-none d-lg-block" href="//xianjun.info/blog/index.xml" target="_blank">
+              RSS <i class="fa fa-rss ml-2 "></i>
+            </a>
+            
+<div class="td-content">
+	<h1>使用Hugo搭建网站</h1>
+	<div class="lead">以本网站 <a href="https://xianjun.info">https://xianjun.info</a> 为例，用hugo从头搭建一个网站</div>
+	<div class="td-byline mb-4">
+		
+		<time datetime="2019-12-07" class="text-muted">Saturday, December 07, 2019</time>
+	</div>
+	<h2 id="概述">概述</h2>
+<p>以本网站 <a href="https://xianjun.info">https://xianjun.info</a> 为例，用hugo从头搭建一个网站</p>
+<h2 id="安装及预览">安装及预览</h2>
+<p>安装（以mac为例，其他系统请看官方文档）</p>
+<pre><code>brew new Hugo
+</code></pre><p>创建网站： mysite替换成你自己的网站名</p>
+<pre><code>hugo new site mysite
+</code></pre><p>目录说明:</p>
+<ul>
+<li>archetypes：包括内容类型，在创建新内容时自动生成内容的配置</li>
+<li>content：包括网站内容，全部使用markdown格式</li>
+<li>layouts：包括了网站的模版，决定内容如何呈现</li>
+<li>static：包括了css, js, fonts, media等，决定网站的外观</li>
+</ul>
+<p><strong>重点：此时预览是一片空白，需要指定一个外观主题，请看下面的【主题及外观定制】</strong></p>
+<h2 id="主题">主题</h2>
+<p>到 <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a> 挑选一个主题，为了让你思维不飘走，我们先随意选定一个主题，让你继续熟悉所有配置后，你再回头挑一个自己喜好的主题吧。我们以 <a href="https://github.com/spf13/hyde">https://github.com/spf13/hyde</a> 模板为例吧：</p>
+<pre><code>cd themes
+git clone https://github.com/spf13/hyde.git
+</code></pre><p>然后，启动本地服务：</p>
+<pre><code>hugo server --theme=hyde --buildDrafts --watch
+</code></pre><p>打开浏览器，输入 <a href="http://127.0.0.1:1313">http://127.0.0.1:1313</a> 预览</p>
+<h3 id="多主题">多主题</h3>
+<p>查找次序：</p>
+<p>文件内容合并：</p>
+<h2 id="内容及分类">内容及分类</h2>
+<p>理解内容组织与链接的对应方式</p>
+<p>概念:</p>
+<p>section
+slug
+path
+url
+type</p>
+<p>索引页: _index.md</p>
+<h3 id="分类内容间的逻辑关系">分类：内容间的逻辑关系</h3>
+<p>taxonomy &gt; term &gt; content</p>
+<p>页面划分及模板查找顺序：</p>
+<ul>
+<li>分类下的术语列表：/taxonomy/terms.html</li>
+<li>术语下的内容列表：/taxonomy/list.html</li>
+</ul>
+<h2 id="配置">配置</h2>
+<h3 id="基本配置">基本配置</h3>
+<pre><code>baseURL = &quot;http://xianjun.info&quot; # 你的域名
+languageCode = &quot;zh-Hans&quot; # 语言类型
+defaultContentLanguage = &quot;zh-Hans&quot; # 文章默认的语言类型
+title = &quot;贤军的博客&quot; # 网站标题
+theme = &quot;docsy&quot; #  主题
+</code></pre><h3 id="配置导航">配置导航</h3>
+<p>主导航</p>
+<pre><code>[[menu.main]]
+name=&quot;博文&quot;
+url=&quot;/blog&quot;
+weight=&quot;1&quot;
+[[menu.main]]
+name=&quot;关于&quot;
+url=&quot;/about&quot;
+weight=&quot;2&quot;
+</code></pre><h2 id="外观定制">外观定制</h2>
+<h2 id="模板">模板</h2>
+<p>TODO:</p>
+<pre><code># kind:
+#     single: 页面
+#     list: 列表
+#     partial: 被引用
+# 
+# /
+# |- _index.md //首页
+# |- &lt;section&gt;
+#     |- &lt;page&gt;.md
+#     |- _index.md
+</code></pre><p>查找规则：TODO</p>
+<h2 id="函数">函数</h2>
+<p>常用函数</p>
+<pre><code>anchorize
+humanize
+deafult
+jsonify
+</code></pre>
+	
+
+	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+  <li>
+    <a  class="btn btn-primary  disabled"><span class="mr-1">←</span> 上一页</a>
+  </li>
+    <a  class="btn btn-primary  disabled">下一页 <span class="ml-1">→</span></a>
+  </li>
+</ul>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub"
+    aria-label="GitHub">
+    <a class="text-white" target="_blank" href="https://github.com/lewis-li">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Developer mailing list"
+    aria-label="Developer mailing list">
+    <a class="text-white" target="_blank" href="mailto:lewis_dev@163.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="rss feed"
+    aria-label="rss feed">
+    <a class="text-white" target="_blank" href="/index.xml">
+      <i class="fa fa-rss"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 lewis.li
+          版权所有</small>
+        
+
+        
+        
+        <small class=""><a href="https://gohugo.io/">由Hugo驱动</a></small>
+        
+        
+        <small class=""><a href="https://github.com/google/docsy">主题基于Docsy</a></small>
+        
+        
+
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.a901fd9d0a1dc9f22ebdf41b83b9fc0110db60231669a75e85560bfac1c20eff.js" integrity="sha256-qQH9nQodyfIuvfQbg7n8ARDbYCMWaadehVYL&#43;sHCDv8=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="//js.users.51.la/20688077.js"></script>
+
+
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    window.addEventListener('load', function () {
+        new Valine({
+            el: '#vcomments',
+            verify: true,
+            appId: '6znJ0TxMsRwKyPaHJYdnT9pl-gzGzoHsz',
+            appKey: '7gfnKDrBJq3vXKrYqHCSLBBm',
+            placeholder: "说点什么吧",
+            avatar: "mp",
+            visitor: true,
+        })
+    })
+
+    
+    if (typeof $ !== 'undefined') {
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $(".top-scroll-bar").attr("style", "width: " + ($(this).scrollTop() / ($(document).height() - $(this).height()) * 100) + "%; display: block;");
+            });
+        });
+    }
+</script>
+
+  </body>
+</html>
